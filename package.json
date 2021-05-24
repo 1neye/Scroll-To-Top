@@ -1,0 +1,26 @@
+{
+  "name": "scroll_top_top",
+  "version": "1.0.0",
+  "description": "This library creates a scroll button to the top of the page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ineye",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/register": "^7.13.16",
+    "eslint": "^7.26.0"
+  }
+}
