@@ -1,5 +1,5 @@
 # SCROLL TO TOP
-[Demo](src/index.html)
+[Demo](https://1neye.github.io/Scroll-To-Top/src/index.html)
 ## Usage
 All files you can find in __downloadMe/__ folder
 ### HTML
