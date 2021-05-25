@@ -3,6 +3,9 @@ const browserSync = require('browser-sync').create();
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
+const autoprefixer = require('gulp-autoprefixer');
+const minify = require('gulp-minify');
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('babel', () =>
     gulp.src('./src/js/babel/*.js')
@@ -44,3 +47,23 @@ gulp.task('serve', function (done) {
 });
 
 gulp.task('default', gulp.series('babel', 'serve'));
+
+
+
+gulp.task('css', async function(done) {
+    gulp.src('src/css/*.css')
+        .pipe(autoprefixer({
+            cascade: false
+        }))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('downloadMe/'))
+    done();
+});
+
+gulp.task('js', function() {
+    gulp.src(['./src/js/*.js'])
+      .pipe(minify())
+      .pipe(gulp.dest('downloadMe/'))
+  });
+
+  gulp.task('build', gulp.series('css', 'js'));

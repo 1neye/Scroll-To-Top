@@ -9,6 +9,7 @@ var sttScroll = function sttScroll() {
       sttElem.classList.add('stt__active');
     } else if (e.target.scrollingElement.scrollTop <= screanHeight) {
       sttElem.classList.remove('stt__active');
+      sttElem.style.pointerEvents = 'auto';
     }
   });
 };
@@ -18,7 +19,9 @@ var sttClick = function sttClick() {
     var docHeight = window.scrollY;
     var progress = 0;
     var position = docHeight;
-    var speed = 1; // When increasing this value. The scrolling speed will increase
+    var speed = 5; // When increasing this value. The scrolling speed will increase
+
+    sttElem.style.pointerEvents = 'none';
 
     var sttAnim = function sttAnim() {
       progress += 1;
@@ -27,9 +30,6 @@ var sttClick = function sttClick() {
 
       if (position > 0) {
         requestAnimationFrame(sttAnim);
-      } else if (position < 0) {
-        progress = 0;
-        position = docHeight;
       }
     };
 

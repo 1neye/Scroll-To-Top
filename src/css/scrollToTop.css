@@ -22,7 +22,7 @@
   background-color: #000;
   border-radius: 5%; }
 
-.stt__block__black:before {
+.stt__block_black:before {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -33,7 +33,7 @@
   background-color: #fff;
   transform: translate(0, -50%) rotate(45deg); }
 
-.stt__block__black:after {
+.stt__block_black:after {
   position: absolute;
   top: 50%;
   right: 40%;
