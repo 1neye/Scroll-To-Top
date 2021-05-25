@@ -1,6 +1,5 @@
 # SCROLL TO TOP
----
-[Demo](https://www.google.com/)
+[Demo](src/index.html)
 ## Usage
 All files you can find in __downloadMe/__ folder
 ### HTML
