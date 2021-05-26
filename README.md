@@ -13,7 +13,21 @@ Add tag with class `stt`
 ```html
 <script defer src="scrollToTop-min.js"></script> 
 ```
-With the setting finished, when you click on the tag, the page will scroll to the top. If you need to add styles to our button, include the css file below ↓.
+With the setting finished, when you click on the tag, the page will scroll to the top.
+### Costum styles
+If you want to style your scroll to top button by yourself. Don't forget to write these styles into your css file. Without these styles, scrollToTop.js will not hide the button when needed.
+```css
+        .stt {
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+
+        .stt__active {
+            visibility: visible;
+            opacity: 0.5;
+        }
+```
 ### CSS
 ```html
 <link rel="stylesheet" href="scrollToTop.css">
